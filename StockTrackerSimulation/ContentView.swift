@@ -27,6 +27,10 @@ class StockViewModel: ObservableObject {
 		loadMockData()
 	}
 
+	deinit {
+		timer?.invalidate()
+	}
+
 	func loadMockData() {
 		stocks = mockData
 	}
@@ -41,43 +45,53 @@ class StockViewModel: ObservableObject {
 		for i in 0..<stocks.count {
 			stocks[i].previousPrice = stocks[i].price
 
-			// Change the percent randomly between -5% to 15%
-			let changePercent = Double.random(in: -0.05...15.00)
-			stocks[i].price *= (1 + changePercent)
+			let change = Double.random(in: -10.0...10.0)
+			stocks[i].price = max(0.01, stocks[i].price + change)
 
 		}
 	}
 }
 
 struct ContentView: View {
-    var body: some View {
-        VStack {
+	@StateObject private var viewModel = StockViewModel()
+
+	var body: some View {
+		NavigationStack {
 			List {
-				ForEach(mockData) { stock in
+				ForEach(viewModel.stocks) { stock in
 					HStack {
-						VStack {
+						VStack(alignment: .leading) {
 							Text(stock.ticker)
 							Text(stock.name)
 								.font(.body.italic())
 						}
 						Spacer()
-						Text(String(format: "$%.2f", stock.price))
+						HStack {
+							Text(String(format: "$%.2f", stock.price))
+								.foregroundStyle(stock.percentChanged >= 0 ? Color.green : Color.red)
+								.animation(.easeInOut(duration: 0.3), value: stock.price)
+							Image(systemName: stock.percentChanged >= 0 ? "arrow.up" : "arrow.down")
+								.resizable().frame(width: 10, height: 10)
+								.scaleEffect(stock.percentChanged >= 0 ? 1.2 : 1.1)
+								.foregroundStyle(stock.percentChanged >= 0 ? Color.green : Color.red)
+								.animation(.spring(), value: stock.percentChanged)
+						}
 					}
 				}
+
 			}
-        }
-    }
+			.task {
+				viewModel.startTimer()
+			}
+			.navigationTitle("Stocks")
+		}
+	}
 }
 
 var mockData: [Stock] = [
-	Stock(ticker: "TSLA",
-		  name: "Tesla",
-		  price: 440.00,
-		  previousPrice: 338.00),
-	Stock(ticker: "AAPL",
-		  name: "Apple",
-		  price: 255.46,
-		  previousPrice: 250.22)
+	Stock(ticker: "TSLA", name: "Tesla", price: 440.00, previousPrice: 338.00),
+	Stock(ticker: "AAPL", name: "Apple", price: 255.46, previousPrice: 250.22),
+	Stock(ticker: "LULU", name: "Lululemon", price: 176.30, previousPrice: 173.22)
 ]
 
 #Preview {
