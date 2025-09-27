@@ -1,0 +1,22 @@
+xcdebugger
+
+
+# Xcode settings
+*.xcsettings
+*.xcuserstate
+*.xcscmblueprint
+
+# Xcode User Data
+**/*.xcuserdata/
+
+# Swift and Xcode specific files
+xcuserdata/
+*.xcuserstate
+*.xcworkspace
+*.xcscheme
+*.xcmappingmodel
+*.xcdebugger/
+*.moved-aside
+*.swp
+*.swo
+*.xcuserstate
