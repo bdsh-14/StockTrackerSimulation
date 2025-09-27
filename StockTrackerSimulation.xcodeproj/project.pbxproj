@@ -7,13 +7,13 @@
 	objects = {
 
 /* Begin PBXFileReference section */
-		279D05BF2E8867FE00426AAF /* StockTrackDummy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StockTrackDummy.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		279D05BF2E8867FE00426AAF /* StockTrackerSimulation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StockTrackerSimulation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		279D05C12E8867FE00426AAF /* StockTrackDummy */ = {
+		279D05C12E8867FE00426AAF /* StockTrackerSimulation */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = StockTrackDummy;
+			path = StockTrackerSimulation;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -32,7 +32,7 @@
 		279D05B62E8867FE00426AAF = {
 			isa = PBXGroup;
 			children = (
-				279D05C12E8867FE00426AAF /* StockTrackDummy */,
+				279D05C12E8867FE00426AAF /* StockTrackerSimulation */,
 				279D05C02E8867FE00426AAF /* Products */,
 			);
 			sourceTree = "<group>";
@@ -40,7 +40,7 @@
 		279D05C02E8867FE00426AAF /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				279D05BF2E8867FE00426AAF /* StockTrackDummy.app */,
+				279D05BF2E8867FE00426AAF /* StockTrackerSimulation.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -48,9 +48,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		279D05BE2E8867FE00426AAF /* StockTrackDummy */ = {
+		279D05BE2E8867FE00426AAF /* StockTrackerSimulation */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 279D05CA2E88680000426AAF /* Build configuration list for PBXNativeTarget "StockTrackDummy" */;
+			buildConfigurationList = 279D05CA2E88680000426AAF /* Build configuration list for PBXNativeTarget "StockTrackerSimulation" */;
 			buildPhases = (
 				279D05BB2E8867FE00426AAF /* Sources */,
 				279D05BC2E8867FE00426AAF /* Frameworks */,
@@ -61,13 +61,13 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				279D05C12E8867FE00426AAF /* StockTrackDummy */,
+				279D05C12E8867FE00426AAF /* StockTrackerSimulation */,
 			);
-			name = StockTrackDummy;
+			name = StockTrackerSimulation;
 			packageProductDependencies = (
 			);
 			productName = StockTrackDummy;
-			productReference = 279D05BF2E8867FE00426AAF /* StockTrackDummy.app */;
+			productReference = 279D05BF2E8867FE00426AAF /* StockTrackerSimulation.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -85,7 +85,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 279D05BA2E8867FE00426AAF /* Build configuration list for PBXProject "StockTrackDummy" */;
+			buildConfigurationList = 279D05BA2E8867FE00426AAF /* Build configuration list for PBXProject "StockTrackerSimulation" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -99,7 +99,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				279D05BE2E8867FE00426AAF /* StockTrackDummy */,
+				279D05BE2E8867FE00426AAF /* StockTrackerSimulation */,
 			);
 		};
 /* End PBXProject section */
@@ -313,7 +313,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		279D05BA2E8867FE00426AAF /* Build configuration list for PBXProject "StockTrackDummy" */ = {
+		279D05BA2E8867FE00426AAF /* Build configuration list for PBXProject "StockTrackerSimulation" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				279D05C82E88680000426AAF /* Debug */,
@@ -322,7 +322,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		279D05CA2E88680000426AAF /* Build configuration list for PBXNativeTarget "StockTrackDummy" */ = {
+		279D05CA2E88680000426AAF /* Build configuration list for PBXNativeTarget "StockTrackerSimulation" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				279D05CB2E88680000426AAF /* Debug */,

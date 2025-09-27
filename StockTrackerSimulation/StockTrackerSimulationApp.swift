@@ -8,7 +8,7 @@
 import SwiftUI
 
 @main
-struct StockTrackDummyApp: App {
+struct StockTrackerSimulationApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
