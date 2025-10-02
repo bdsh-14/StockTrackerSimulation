@@ -20,12 +20,5 @@ To get started with this project:
 ```bash
 git clone https://github.com/bdsh-14/StockTrackerSimulation.git
 ```
-2. Follow setup instructions in the documentation
-
-## Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
-
-## License
-
-This project is open source and available under the MIT License.
+2. Open the project in Xcode, select the simulator or device (minimum version iOS 16.8).
+3. Click the Run button on Xcode.
